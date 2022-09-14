@@ -2,102 +2,214 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Welcome | Minji Choi</title>
+    <title>Minji Choi</title>
+
+    <!-- CSS and icons -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/theme1.css" id="theme"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- JavaScript -->
+    <script src="js/toggle-theme.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
   </head>
 
   <body>
     <!-- Navigation Bar -->
-    <nav>
-      <a class="active" href="#home">Home</a>
-      <a href="#about">About Me</a>
-      <a href="#qualifications">Qualifications</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#services">Services</a>
+    <nav class="navbar">
+      <div class="max-width">
+        <div class="logo"><a href="#">Welcome<span>!</span></a></div>
+        <ul class="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#qualifications">Qualifications</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a onclick="toggleTheme()">Transform!</a></li>
+        </ul>
+      </div>
     </nav>
 
     <!-- Home (Landing Area) -->
     <section class="home" id="home">
-      <div class="avatar">
-        <!-- <img src="img/" alt=""> -->
-      </div>
-      <div class="intro">
-        <p>Howdy! My name is Minji Choi, and I am a Programmer.</p>
+      <div class="max-width">
+        <div class="home-content">
+          <div class="text-1">Howdy! My name is</div>
+          <div class="text-2">Minji Choi,</div>
+          <div class="text-3">and I am a <span>Programmer.</span></div>
+        </div>
       </div>
     </section>
 
     <!-- About Me -->
     <section class="about" id="about">
-      <h2 class="title">About Me</h2>
-      <div class="about-content">
-        <div class="profile">
-          <!-- <img src="img/" alt=""> -->
-        </div>
-        <div class="personal-summary">
-          <p>
-            I am a senior at <a href="https://www.tamu.edu/"" target="_blank">Texas A&M University</a> pursuing a Bachelor's degree in Computer Science with a focus in Statistics, and here is a little story.
-            <br><br>
-            Back when I was still a senior in high school, my dream major was Biomedical Engineering, so how did I end up in Computer Science instead? Ironically, the first spark for my 
-            interest in the field lit up during my <i>freshman</i> year of high school. I took a mandatory introductory computer science class, where I learned to use Scratch, Python, HTML, and Alice. 
-            After the year ended, however, I shifted my focus back to biomedical engineering in order to somewhat achieve my childhood dream of medically helping people.
-            <br><br>
-            Then came freshman year of college at Texas A&M. Once again, I had to take a mandatory introductory programming course. Once again, my interest in computer science sparked. But this 
-            time, it grew into a fire and there was no stopping it<span>&#8212;</span>I had way too much fun in the course! So here I am, still loving computer science as much as I did when I was 
-            still printing, “Hello, World!” despite the headaches it comes with nowadays.
-            <br><br>
-            I never hesitate to say that I am passionate about computer science. I may not be the best, but I certainly am beyond willing and am quick to learn new things such as languages, 
-            frameworks, etc. I am a flexible and positive individual who knows the importance of communication in teamwork.
-            <br><br>
-            In my leisure time, I like to play video games and watch the most random videos online ranging from gaming clips to cooking tutorials to videos of adorable animals. I absolutely 
-            love animals, hence the picture of me with <a href="https://www.tamu.edu/traditions/aggie-culture/reveille/index.html" target="_blank">Reveille</a>! Recently, I have become interested in learning 
-            to play sports like basketball, volleyball, and tennis properly instead of just playing for fun. I also really love to sing until I get tired!            
-          </p>
-          <ul class="icons">
-            <li><a href="https://www.linkedin.com/in/mchoi0320/" target="_blank"><i class="fa fa-linkedin-square fa-3x"></i></a></li>
-            <li><a href="https://github.tamu.edu/mchoi0320" target="_blank"><i class="fa fa-github fa-3x"></i></a></li>
-            <li><a href="mailto:mchoi0320@tamu.edu"><i class="fa fa-envelope fa-3x"></i></a></li>
-          </ul>
+      <div class="max-width">
+        <h2 class="title">About Me</h2>
+        <div class="about-content">
+          <div class="column left">
+            <img src="img/avatar.jpg" alt="">
+          </div>
+          <div class="column right">
+            <!-- <div class="text">I am Minji Choi.</div> -->
+            <p>
+              I am a senior at <a href="https://www.tamu.edu/"" target="_blank">Texas A&M University</a> pursuing a Bachelor's degree in Computer Science with a focus in Statistics, and here is a little story.
+              <br><br>
+              Back when I was still a senior in high school, my dream major was Biomedical Engineering, so how did I end up in Computer Science instead? Ironically, the first spark for my 
+              interest in the field lit up during my <i>freshman</i> year of high school. I took a mandatory introductory computer science class, where I learned to use Scratch, Python, HTML, and Alice. 
+              After the year ended, however, I shifted my focus back to biomedical engineering in order to somewhat achieve my childhood dream of medically helping people.
+              <br><br>
+              Then came freshman year of college at Texas A&M. Once again, I had to take a mandatory introductory programming course. Once again, my interest in computer science sparked. But this 
+              time, it grew into a fire and there was no stopping it<span>&#8212;</span>I had way too much fun in the course! So here I am, still loving computer science as much as I did when I was 
+              still printing, “Hello, World!” despite the headaches it comes with nowadays.
+              <br><br>
+              I never hesitate to say that I am passionate about computer science. I may not be the best, but I certainly am beyond willing and am quick to learn new things such as languages, 
+              frameworks, etc. I am a flexible and positive individual who knows the importance of communication in teamwork.
+              <br><br>
+              In my leisure time, I like to play video games and watch the most random videos online ranging from gaming clips to cooking tutorials to videos of adorable animals. I absolutely 
+              love animals, hence the picture of me with <a href="https://www.tamu.edu/traditions/aggie-culture/reveille/index.html" target="_blank">Reveille</a>! Recently, I have become interested in learning 
+              to play sports like basketball, volleyball, and tennis properly instead of just playing for fun. I also really love to sing until I get tired!      
+            </p>
+            <ul class="icons">
+              <li><a href="https://www.linkedin.com/in/mchoi0320/" target="_blank"><i class="fa fa-linkedin-square fa-3x"></i></a></li>
+              <li><a href="https://github.tamu.edu/mchoi0320" target="_blank"><i class="fa fa-github fa-3x"></i></a></li>
+              <li><a href="mailto:mchoi0320@tamu.edu"><i class="fa fa-envelope fa-3x"></i></a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Qualifications -->
     <section class="qualifications" id="qualifications">
-      <h2 class="title">Qualifications</h2>
-      <div class="qualifications-content">
-        <div class="resume-img">
-          <!-- <img src="img/" alt="A picture of my resume"> -->
-        </div>
-        <div class="technical-summary">
-          <h3>Skills</h3>
-          <p>
-            I am proficient in C++ and Python and have moderate experience using C, Java, Haskell, and Git.
-            I am also familiar with front-end web development using HTML, CSS, JavaScript, and frameworks
-            like Bootstrap and Flask API.
-          </p>
-          <h3>Technical Interests</h3>
-          <p>
-            Currently, my primary interest lies in UI/UX and web development because I enjoy thinking about ways to assemble visual elements to engage an audience with diverse, 
-            interactive features that will leave a lasting impression without being distracting. This interest is probably a result of my fascination for psychology. However, 
-            I am also interested in game design, software development, and data science, as it just seems so exciting to work on large projects in these disciplines. Additionally, 
-            I would like to learn more about cybersecurity and human-computer interation.
-          </p>          
+      <div class="max-width">
+        <h2 class="title">Qualifications</h2>
+        <div class="qualifications-content">
+          <div class="resume">
+            <img id="resume" src="img/MinjiChoi_Resume.jpg" alt="A picture of my resume">
+          </div>
+          <div class="technical-summary">
+            <br>
+            <h2>Skills</h2>
+            <p>
+              I am proficient in C++ and Python and have moderate experience using C, Java, Haskell, and Git.
+              I am also familiar with front-end web development using HTML, CSS, JavaScript, and frameworks
+              like Bootstrap and Flask API.
+            </p>
+            <br>
+            <h2>Technical Interests</h2>
+            <p>
+              Currently, my primary interest lies in UI/UX and web development because I enjoy thinking about ways to assemble visual elements to engage an audience with diverse, 
+              interactive features that will leave a lasting impression without being distracting. This interest is probably a result of my fascination for psychology. However, 
+              I am also interested in game design, software development, and data science, as it just seems so exciting to work on large projects in these disciplines. Additionally, 
+              I would like to learn more about cybersecurity and human-computer interation.
+            </p>
+            <a href="MinjiChoi_Resume.pdf" target="_blank" class="btn" id="dl-btn" download>Download My Resume</a>
+          </div>
         </div>
       </div>
     </section>
-    
+
     <!-- Portfolio -->
     <section class="portfolio" id="portfolio">
-      <h2 class="title">Portfolio</h2>
-
+      <div class="max-width">
+        <h2 class="title">Portfolio</h2>
+        <div class="portfolio-content">
+          <div class="my-slides fade">
+            <img src="img/DePlane.png">
+            <div class="caption">
+              <h2>DePlane</h2>
+              <p>
+                <a href="https://devpost.com/software/deplane-mwdart" target="_blank">DePlane</a> is a web application product developed as a team during 
+                <a href="https://tamuhack.com/" target="_blank">TAMUhack</a> 2020. It allows the user to both obtain information about their landing destination and control 
+                features found during flight. We are proud to have created our own back-end service comprising of multiple APIs, as it made accessing our data much easier 
+                and faster. Also, we were able to implement the caching of different results from the APIs to limit the requests made to the services. Through this project, 
+                we learned how to implement Google's APIs and how to access APIs resourcefully to not go over any limits presented with the services.
+              </p>
+            </div>
+          </div>
+          <div class="my-slides fade">
+            <img src="img/PolyCalc.png">
+            <div class="caption">
+              <h2>Polynomial Applications Solver</h2>
+              <p>
+                The objective of this <a href="https://github.tamu.edu/mchoi0320/CSCE_121H/tree/master/Project7" target="_blank">project</a> was to write a C++ program for manipulating polynomials, 
+                including reading (parsing from strings), writing, finding sums and products, evaluation, taking derivatives, and calculating roots.
+              </p>
+            </div>
+          </div>
+          <div class="my-slides fade">
+            <img src="img/ElevatorSim.png">
+            <div class="caption">
+              <h2>Elevator Simulator</h2>
+              <p>
+                The goal of this project was to write a <a href="https://github.tamu.edu/mchoi0320/CSCE_121H/tree/master/Project10" target="_blank">simulation of an elevator system</a>. I made a model 
+                of a building with <i>f</i> floors served by <i>c</i> elevator cars. It is an event-driven simulator, where, with each time-step, new passengers can arrive on floors, 
+                elevators can move between floors, and/or pick-up/drop-off passengers.
+              </p>
+            </div>
+          </div>
+          <div class="my-slides fade">
+            <img src="img/Resolution.png">
+            <div class="caption">
+              <h2>Resolution Proof Program</h2>
+              <p>
+                This project was written to perform logical proofs using <a href="https://github.tamu.edu/mchoi0320/CSCE_420/tree/master/Proj5" target="_blank">Resolution Refutation</a>. In addition, 
+                I created a complementary program that generates knowledge base files for the Wumpus World problem, which can be used as an input to the main program.
+              </p>
+            </div>
+          </div>
+          <a class="prev" onclick="changeSlides(-1)">&#10094;</a>
+          <a class="next" onclick="changeSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div class="slide-indicators">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+      </div>
     </section>
 
     <!-- Services -->
     <section class="services" id="services">
-      <h2 class="title">Services</h2>
-
+      <div class="max-width">
+        <h2 class="title">Services</h2>
+        <div class="services-content flex-container">
+          <div class="card">
+            <img src="img/SkeetShoot.jpg" alt="Hidalgo-Starr County A&M Club's 8th Annual Skeet Shoot poster">
+            <h4 class="card-title">Skeet Shoot Fundraising Event</h4>
+            <p class="card-text">
+              The <a href="https://rgvaggies.com/" target="_blank">Hidalgo-Starr County A&M Club</a> hosted their 8th Annual Skeet Shoot in October 2018 to raise money for the Club's scholarship funds, 
+              which are awarded to high school seniors who live in Hidalgo-Starr County that have been admitted to Texas A&M University in College Station, Galveston, or McAllen. As a 
+              volunteer, I helped set up for the event and assisted the participants throughout the competition.
+            </p>
+          </div>
+          <div class="card">
+            <img src="img/BigEvent.jpg" alt="Group Photo at The BIG Event: McAllen">
+            <h4 class="card-title">The Big Event: McAllen</h4>
+            <p class="card-text">
+              On Saturday, March 30, 2019, 82 Aggies, former students, and Aggie family members came together to participate in The Big Event: McAllen. <a href="https://bigevent.tamu.edu/" target="_blank">The Big Event</a> is 
+              the nation’s largest one-day service project where students show appreciation for their community’s continued support of Texas A&M University students during their college careers. The BIG Event: McAllen 
+              provided support to the Food Bank of the Rio Grande Valley where volunteers helped facilitate food access and safety for the 64,000+ individuals that the Food Bank of the Rio Grande Valley served 
+              during the first week of April in 2019. This impact includes the 1,200 food packages assembled by Aggies that were distributed to senior citizens in the community.
+            </p>
+          </div>
+          <div class="card">
+            <img src="img/FoodBank.jpg" alt="Logo of the Food Bank of the Rio Grande Valley, Inc.">
+            <h4 class="card-title">Food Bank of the Rio Grande Valley, Inc.</h4>
+            <p class="card-text">
+              After my experience at The Big Event, I returned to the <a href="https://foodbankrgv.com/" target="_blank">Food Bank of the Rio Grande Valley</a> to volunteer because I genuinely felt the importance of helping at the facility 
+              to assist in packaging and distributing nutritious food quickly yet safely to those who need it. I also helped to clean and maintain a sanitary work area.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <script src="js/sticky-nav.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/slideshow.js"></script>
   </body>
 </html>

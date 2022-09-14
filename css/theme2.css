@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+/* Theme */
+:root {
+  --primary-color: black;
+  --link-color: #FF66A2;
+  --nav-color: #FFCDDE;
+  /* --font-color: #777;
+  --bg-color: white; */
+
+  --dark-bg: url('../images/starry_black_bg.jfif');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.max-width {
+    max-width: 1826px;
+    padding: 0 80px;
+    margin: auto;
+}
+a {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+a:hover {
+    color: var(--link-color);
+    transition: 0.3s ease;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+.navbar.sticky {
+    padding: 15px 0;
+    background: var(--primary-color);
+}
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a {
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo a span {
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+    color: white;
+}
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover {
+    color: var(--primary-color);
+}
+.navbar.sticky .menu li a:hover {
+    color: var(--nav-color);
+}
+
+/* Consistent Styles */
+section {
+    padding: 100px 0;
+}
+section .title {
+    position: relative;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: black;
+    transform: translateX(-50%);
+}
+section .title::after {
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    padding: 5px;
+    color: var(--primary-color);
+    background: white;
+    transform: translateX(-50%);
+}
+
+/* Home */
+.home {
+    display: flex;
+    background: var(--dark-bg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 500px;
+    height: 100vh;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+.home .max-width {
+    margin: auto 0 auto 40px;
+}
+.home .home-content .text-1 {
+    font-size: 27px;
+}
+.home .home-content .text-2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content .text-3 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* About Me */
+.about, .portfolio {
+    font-family: 'Poppins', sans-serif;
+}
+.about .title::after {
+    content: "Who am I?";
+}
+.about .about-content, .portfolio .portfolio-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.about .about-content .left {
+    width: 45%;
+}
+.about .about-content .left img {
+    height: 630px;
+    width: 630px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.about .about-content .right {
+    width: 55%;
+}
+.about .about-content .right p {
+    text-align: justify;
+}
+.icons {
+  position: relative;
+  display: flex;
+  padding-top: 25px;
+  padding-left: 0;
+  align-items: center;
+}
+.icons li {
+  list-style: none;
+  padding-right: 22px;
+}
+.icons li a {
+  position: relative;
+  display: inline-block;
+}
+.fa {
+  color: var(--primary-color);
+}
+.fa:hover {
+  color: var(--link-color);
+  transition: 0.3s ease;
+}
+
+/* Portfolio */
+.portfolio {
+    box-sizing: border-box;
+}
+.portfolio .title::after {
+    content: "My projects";
+}
+.portfolio-content {
+    position: relative;
+    margin-left: 20px;
+}
+.portfolio-content img {
+    width: 900px;
+    height: 605px;
+    object-fit: cover;
+}
+.my-slides {
+    display: none;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 746px;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+.caption {
+    padding-left: 1000px;
+    top: 30%;
+    position: absolute;
+}
+.caption h2 {
+    font-size: 30px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.caption p {
+    padding-top: 10px;
+}
+.slide-indicators {
+    margin-left: 425px;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: #717171;
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Qualifications */
+.qualifications .title::after {
+    content: "What I provide";
+}
+
+/* Services */
+.services .title::after {
+    content: "Volunteer work";
+}
