@@ -15,6 +15,13 @@
     text-decoration: none;
     overflow-x: hidden;
 }
+body {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+body::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
 .title {
     font-family: 'Raleway', sans-serif;
     font-size: 60px;
@@ -35,7 +42,7 @@ a:hover {
 .navbar ul {
     list-style-type: none;
     margin: 0;
-    padding: 250px 0;
+    padding: 210px 0;
     text-align: center;
     width: 20%;
     background-color: var(--primary-color);
@@ -44,21 +51,22 @@ a:hover {
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
     font-size: 25px;
+    overflow-y: hidden;
 }
 .navbar li a {
     display: block;
     color: white;
-    padding: 20px;
+    padding: 30px 20px;
 }
 .navbar li a:hover {
     background-color: var(--link-color);
     color: white;
     transition: all 0.4s ease;
 }
-.navbar .active-section {
+/* .navbar .active-section {
     background-color: var(--link-color);
     color: white;
-}
+} */
 .navbar .logo {
     display: none;
 }
@@ -68,7 +76,7 @@ a:hover {
     margin-left: 20%;
     background: var(--theme-bg);
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     font-family: 'Raleway', sans-serif;
 }
 .home .home-content {
@@ -171,7 +179,10 @@ a:hover {
     width: 60%;
     order: 1;
     padding-right: 50px;
-    padding-top: 200px;
+    padding-top: 180px;
+}
+.technical-summary p {
+    padding-top: 10px;
 }
 .technical-summary .btn {
     background-color: var(--primary-color);
@@ -195,7 +206,7 @@ a:hover {
 .portfolio .portfolio-content {
     position: relative;
     justify-content: center;
-    padding-top: 10px;
+    padding-top: 7px;
 }
 .portfolio .portfolio-content a:hover {
     color: white;
@@ -222,20 +233,20 @@ a:hover {
     user-select: none;
 }
 .prev {
-    left: 176px;
+    left: 183px;
     border-radius: 0 5px 5px 0;
 }
 .next {
-    right: 176px;
+    right: 183px;
     border-radius: 5px 0 0 5px;
 }
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
 }
 .caption {
-    bottom: 0;
+    bottom: 4px;
     position: absolute;
-    margin-right: 176px;
+    margin-right: 183px;
     padding: 30px 50px;
     background-color: rgba(182,95,207,.85);
 }
@@ -281,8 +292,44 @@ a:hover {
 /* Services */
 .services .services-content {
     flex-direction: column;
+    margin-left: 70px;
+    margin-bottom: 20px;
 }
-.services .services-content img {
-    width: 300px;
+.services .services-content .card {
+    display: flex;
+    padding-top: 5px;
+}
+.services .services-content .card .card-img {
+    width: 35%;
+}
+.services .services-content .card .card-img img {
+    width: 400px;
+    height: 240px;
     object-fit: cover;
+    border-radius: 10px;
+}
+#card-img {
+    order: 2;
+}
+.services .services-content .card .card-content {
+    width: 65%;
+}
+.services .services-content .card .card-content .card-title {
+    font-size: 20px;
+}
+.services .services-content .card .card-content .card-text {
+    padding-top: 10px;
+}
+#card-1 {
+    padding-top: 60px;
+    padding-right: 70px;
+}
+#card-2 {
+    text-align: right;
+    padding-top: 25px;
+    padding-right: 65px;
+}
+#card-3 {
+    padding-top: 65px;
+    padding-right: 70px;
 }
